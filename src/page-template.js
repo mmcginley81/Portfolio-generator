@@ -1,8 +1,6 @@
 
 const fs = require('fs');
 
-const generatePage = require('./src/page-template.js');
-
 const profileDataArgs = process.argv.slice(2);
 
 const [name, github] = profileDataArgs;
@@ -35,3 +33,4 @@ fs.writeFile('./index.html', generatePage(names, github), err => {
 console.log(names, github)
 console.log(generatePage(names, github));
 
+module.exports = generatePage
